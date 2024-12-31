@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        The <title> tag defines the title of the document, visible on the browser tab.
+        This is important for SEO and user understanding.
+    -->
+    <title>HTML Notes and Practices</title>
+    <!--
+        The <meta> tag provides metadata about the HTML document.
+        - charset="UTF-8": Ensures proper rendering of characters, supporting all languages.
+        - viewport: Makes the page responsive, adapting to different device widths.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Linking a CSS stylesheet.
+        Use the <link> tag to connect external stylesheets.
+        - rel="stylesheet": Specifies the relationship between the document and the linked file.
+        - href: Path to the CSS file.
+    -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--
+        Adding JavaScript to the document.
+        - Use the <script> tag for inline or external scripts.
+        - src: Path to the JavaScript file.
+        - defer: Ensures the script executes after the document has been parsed.
+    -->
+    <script src="scripts.js" defer></script>
+
+    <!--
+        Including a favicon. (for icons on html)
+        The <link> tag can also be used to set a favicon.
+        - rel="icon": Specifies the type of icon.
+        - href: Path to the icon file.s
+    -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!--
+        Adding custom fonts.
+        You can use services like Google Fonts or host your fonts locally.
+        Example of linking a Google Font:
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--
+        Frameworks and Libraries.
+        - For frameworks like Bootstrap, include their CSS and JS files.
+        Example:
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <!-- Headings -->
+    <!--
+        Headings (<h1> to <h6>) define the structure of the content.
+        - <h1> is the most important heading.
+        - Headings should follow a hierarchy for accessibility and SEO.
+    -->
+    <h1>Main Heading (h1)</h1>
+    <h2>Secondary Heading (h2)</h2>
+    <h3>Tertiary Heading (h3)</h3>
+    
+    <!-- Paragraph -->
+    <!--
+        The <p> tag defines a paragraph of text.
+        Use paragraphs to separate blocks of text logically.
+    -->
+    <p>This is a paragraph providing some information about HTML tags.</p>
+
+    <!-- Anchor (Link) -->
+    <!--
+        The <a> tag defines a hyperlink.
+        - href: Specifies the URL the link points to.
+        - target: Defines where to open the link. (_blank opens in a new tab.)
+        - src: Specifies for a file on your files.
+        Always provide meaningful link text for accessibility.
+    -->
+    <a href="https://example.com" target="_blank">Visit Example</a>
+
+    <!-- Image -->
+    <!--
+        The <img> tag embeds an image in the page.
+        - src: Path to the image file.
+        - alt: Descriptive text for accessibility and in case the image cannot load.
+    -->
+    <img src="image.jpg" alt="Example Image">
+
+    <!-- Button -->
+    <!--
+        The <button> tag defines a clickable button.
+        - type="button": Specifies the button's behavior (e.g., "submit" for forms).
+    -->
+    <button type="button">Click Me</button>
+
+    <!-- Div -->
+    <!--
+        The <div> tag defines a division or section in the document.
+        - Commonly used as a container for other elements.
+    -->
+    <div>
+        This is a container defined using a <div> tag.
+    </div>
+
+    <!-- Section -->
+    <!--
+        The <section> tag represents a standalone section of content.
+        Useful for grouping related content together.
+    -->
+    <section>
+        <h2>Section Heading</h2>
+        <p>This is a paragraph inside a section.</p>
+    </section>
+
+    <!-- 
+        ADD IF U READ:
+        span 
+        br
+        strong
+        em
+    -->
+
+    <!-- Form and Input Types -->
+    <!--
+        Forms collect user input.
+        - action: URL to send form data.
+        - method: HTTP method (e.g., "GET", "POST").
+        - Various <input> types provide different input controls.
+    -->
+    <form action="/submit" method="POST">
+        <!-- Label associates text with input for better accessibility -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120">
+        <br>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+        <label>
+            <input type="checkbox" name="subscribe" value="newsletter">
+            Subscribe to Newsletter
+        </label>
+        <br>
+        <input type="submit" value="Submit Form">
+    </form>
+
+    <!--
+        Best Practices for Organization:
+        - Place all stylesheets in a "css" folder and scripts in a "js" folder for clarity.
+        - Keep the main content of your page semantic and logical.
+        - Use comments to document complex sections of your code.
+    -->
+</body>
+</html>
+

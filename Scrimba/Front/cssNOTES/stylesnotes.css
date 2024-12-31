@@ -1,0 +1,118 @@
+/*
+The box model explains how HTML elements are structured and spaced. It consists of:
+
+1. Margin (Outer spacing of the box)
+   - Example:
+     margin-top: 10px; /* Space above the box */
+     margin-bottom: 10px; /* Space below the box */
+     margin-left: 10px; /* Space to the left of the box */
+     margin-right: 10px; /* Space to the right of the box */
+
+2. Padding (Inner spacing of the box)
+   - Example:
+     padding-top: 10px; /* Space inside the box at the top */
+     padding-bottom: 10px; /* Space inside the box at the bottom */
+     padding-left: 10px; /* Space inside the box on the left */
+     padding-right: 10px; /* Space inside the box on the right */
+
+3. Border (Defines the outline of the box)
+   - Example:
+     border: 4px solid #COLOR; /* Solid border with a specified color */
+     border-radius: 10px; /* Rounds the corners, creating circular edges */
+
+4. Content (Actual text or elements inside the box)
+   - Example:
+     content: "Text here"; /* Used in pseudo-elements like ::before or ::after */
+
+Display Property:
+------------------
+This determines how elements are displayed.
+   - display: block; /* Elements are stacked vertically */
+   - display: inline; /* Elements are aligned horizontally, like a sentence */
+   - display: inline-block; /* Inline alignment but behaves like a block */
+   - display: flex; /* Used for Flexbox layout (explained below) */
+
+Text Alignment (Only works for inline elements):
+   - text-align: center; /* Centers the text */
+   - text-align: left; /* Aligns text to the left */
+   - text-align: right; /* Aligns text to the right */
+
+Flexbox Layout:
+---------------
+Flexbox is a powerful tool for aligning and distributing space.
+Example:
+   display: flex; /* Apply Flexbox to a container */
+   justify-content: /* Aligns child elements horizontally */
+       - center; /* Centers the elements */
+       - flex-start; /* Aligns elements to the start */
+       - flex-end; /* Aligns elements to the end */
+       - space-between; /* Distributes space between elements */
+       - space-around; /* Distributes space around elements */
+
+Responsive Design:
+-------------------
+Responsive design ensures a website adapts to various screen sizes. Techniques include:
+
+1. Media Queries:
+   - Example:
+     @media (max-width: 768px) {
+         body {
+             font-size: 14px; /* Adjust font size for smaller screens */
+         }
+     }
+
+2. Units of Measurement:
+   - px (Pixels): Absolute unit for fixed sizes.
+   - % (Percentage): Relative to the parent container.
+   - vh (Viewport Height): Relative to the height of the viewport.
+   - vw (Viewport Width): Relative to the width of the viewport.
+   - em: Relative to the font size of the parent.
+   - rem: Relative to the root element's font size.
+
+3. Flexbox and Grid:
+   - Use flexbox and grid for flexible layouts that adapt to screen sizes.
+
+4. Frameworks:
+   - Utilize CSS frameworks like Bootstrap for pre-designed responsive components.
+*/
+*/
+button {
+    /* Styling for buttons */
+    color: #0f1419; /* Text color */
+    border: 1px solid #cfd9de; /* Border with color and width */
+    border-radius: 18px; /* Rounded corners */
+    background: white; /* Background color */
+    padding-top: 8px; /* Inner spacing at the top */
+    padding-bottom: 8px; /* Inner spacing at the bottom */
+    padding-left: 16px; /* Inner spacing on the left */
+    padding-right: 16px; /* Inner spacing on the right */
+    font-weight: bold; /* Bold text */
+}
+
+.search-input {
+    /* Styling for search input fields */
+    display: block; /* Block-level element */
+    width: 400px; /* Fixed width */
+    margin-left: auto; /* Centers horizontally */
+    margin-right: auto; /* Centers horizontally */
+    line-height: 24px; /* Vertical alignment for text within input */
+    padding-top: 10px; /* Inner spacing at the top */
+    padding-bottom: 10px; /* Inner spacing at the bottom */
+    padding-left: 30px; /* Inner spacing on the left */
+    padding-right: 30px; /* Inner spacing on the right */
+    border: 1px solid #dfe1e5; /* Border color and width */
+    border-radius: 24px; /* Rounded corners */
+}
+
+.btn {
+    /* Centers a button horizontally */
+    display: block; /* Block-level element */
+    margin-left: auto; /* Pushes the element to the center */
+    margin-right: auto; /* Pushes the element to the center */
+}
+
+.nav-wrapper {
+    /* Flexbox container for navigation */
+    display: flex; /* Enables Flexbox layout */
+    justify-content: center; /* Centers child elements horizontally */
+}
