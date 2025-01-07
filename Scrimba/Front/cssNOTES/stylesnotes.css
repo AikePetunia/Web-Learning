@@ -1,3 +1,4 @@
+
 /*
 The box model explains how HTML elements are structured and spaced. It consists of:
 
@@ -15,46 +16,53 @@ The box model explains how HTML elements are structured and spaced. It consists 
      padding-left: 10px; /* Space inside the box on the left */
      padding-right: 10px; /* Space inside the box on the right */
 
+   Shorthand for padding and margin follows a clockwise direction:
+     padding: 10px; /* Applies 10px to all sides */
+     padding: 10px 20px; /* 10px to top/bottom, 20px to left/right */
+     padding: 10px 20px 30px 40px; /* Top, right, bottom, left */
+     (Same applies to margin)
+
 3. Border (Defines the outline of the box)
    - Example:
      border: 4px solid #COLOR; /* Solid border with a specified color */
-     border-radius: 10px; /* Rounds the corners, creating circular edges */
+     border-radius: 10px; /* Rounds the corners */
 
-4. Content (Actual text or elements inside the box)
+4. Content (The actual text or elements inside the box)
    - Example:
      content: "Text here"; /* Used in pseudo-elements like ::before or ::after */
 
 Display Property:
-------------------
-This determines how elements are displayed.
-   - display: block; /* Elements are stacked vertically */
-   - display: inline; /* Elements are aligned horizontally, like a sentence */
-   - display: inline-block; /* Inline alignment but behaves like a block */
-   - display: flex; /* Used for Flexbox layout (explained below) */
+-----------------
+This determines how elements are displayed:
+   - display: block; /* Stacks elements vertically */
+   - display: inline; /* Aligns elements horizontally */
+   - display: inline-block; /* Behaves like a block but aligns inline */
+   - display: flex; /* Enables Flexbox layout */
 
-Text Alignment (Only works for inline elements):
-   - text-align: center; /* Centers the text */
+Text Alignment:
+---------------
+Aligns text within block-level elements:
+   - text-align: center; /* Centers text */
    - text-align: left; /* Aligns text to the left */
    - text-align: right; /* Aligns text to the right */
 
 Flexbox Layout:
 ---------------
-Flexbox is a powerful tool for aligning and distributing space.
-Example:
-   display: flex; /* Apply Flexbox to a container */
-   justify-content: /* Aligns child elements horizontally */
-       - center; /* Centers the elements */
-       - flex-start; /* Aligns elements to the start */
-       - flex-end; /* Aligns elements to the end */
-       - space-between; /* Distributes space between elements */
-       - space-around; /* Distributes space around elements */
+A powerful tool for alignment and spacing:
+   - display: flex; /* Enables Flexbox layout for the container */
+   - justify-content: /* Aligns child elements horizontally */
+       - center; /* Centers elements */
+       - flex-start; /* Aligns to the start */
+       - flex-end; /* Aligns to the end */
+       - space-between; /* Equal space between elements */
+       - space-around; /* Equal space around elements */
 
 Responsive Design:
--------------------
-Responsive design ensures a website adapts to various screen sizes. Techniques include:
+------------------
+Ensures the layout adapts to different screen sizes:
 
 1. Media Queries:
-   - Example:
+   Example:
      @media (max-width: 768px) {
          body {
              font-size: 14px; /* Adjust font size for smaller screens */
@@ -62,57 +70,67 @@ Responsive design ensures a website adapts to various screen sizes. Techniques i
      }
 
 2. Units of Measurement:
-   - px (Pixels): Absolute unit for fixed sizes.
-   - % (Percentage): Relative to the parent container.
-   - vh (Viewport Height): Relative to the height of the viewport.
-   - vw (Viewport Width): Relative to the width of the viewport.
-   - em: Relative to the font size of the parent.
+   - px: Fixed size in pixels.
+   - %: Relative to the parent container.
+   - vh: Relative to the viewport height.
+   - vw: Relative to the viewport width.
+   - em: Relative to the parent's font size.
    - rem: Relative to the root element's font size.
 
 3. Flexbox and Grid:
-   - Use flexbox and grid for flexible layouts that adapt to screen sizes.
+   Use Flexbox or Grid for adaptable layouts.
 
 4. Frameworks:
-   - Utilize CSS frameworks like Bootstrap for pre-designed responsive components.
+   CSS frameworks like Bootstrap provide responsive components.
 */
-*/
+
 button {
-    /* Styling for buttons */
-    color: #0f1419; /* Text color */
-    border: 1px solid #cfd9de; /* Border with color and width */
-    border-radius: 18px; /* Rounded corners */
-    background: white; /* Background color */
-    padding-top: 8px; /* Inner spacing at the top */
-    padding-bottom: 8px; /* Inner spacing at the bottom */
-    padding-left: 16px; /* Inner spacing on the left */
-    padding-right: 16px; /* Inner spacing on the right */
-    font-weight: bold; /* Bold text */
+    /* Button styling */
+    color: #0f1419;
+    border: 1px solid #cfd9de;
+    border-radius: 18px;
+    background: white;
+    padding: 8px 16px;
+    font-weight: bold;
 }
 
 .search-input {
-    /* Styling for search input fields */
-    display: block; /* Block-level element */
-    width: 400px; /* Fixed width */
-    margin-left: auto; /* Centers horizontally */
-    margin-right: auto; /* Centers horizontally */
-    line-height: 24px; /* Vertical alignment for text within input */
-    padding-top: 10px; /* Inner spacing at the top */
-    padding-bottom: 10px; /* Inner spacing at the bottom */
-    padding-left: 30px; /* Inner spacing on the left */
-    padding-right: 30px; /* Inner spacing on the right */
-    border: 1px solid #dfe1e5; /* Border color and width */
-    border-radius: 24px; /* Rounded corners */
+    /* Search input styling */
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    line-height: 24px;
+    padding: 10px 30px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
 }
 
 .btn {
-    /* Centers a button horizontally */
-    display: block; /* Block-level element */
-    margin-left: auto; /* Pushes the element to the center */
-    margin-right: auto; /* Pushes the element to the center */
+    /* Center button horizontally */
+    display: block;
+    margin: 0 auto;
 }
 
 .nav-wrapper {
-    /* Flexbox container for navigation */
-    display: flex; /* Enables Flexbox layout */
-    justify-content: center; /* Centers child elements horizontally */
+    /* Navigation wrapper */
+    display: flex;
+    justify-content: center;
 }
+
+/*
+Debugging tip:
+To visualize element margins and borders:
+   * {
+       outline: 1px solid red;
+   }
+*/
+
+/*
+Font styling:
+- Use widely available fonts for faster load times.
+- Web-safe fonts are pre-installed on most devices.
+- Use Google Fonts for additional options.
+- Add fallback fonts separated by a comma.
+  Example:
+    font-family: 'Arial', sans-serif;
+*/

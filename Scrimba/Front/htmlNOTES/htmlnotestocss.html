@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- lang for language -->
 <head>
     <!--
         The <title> tag defines the title of the document, visible on the browser tab.
         This is important for SEO and user understanding.
     -->
-    <title>HTML Notes and Practices</title>
+    <title>HTML Notes and Practices</title> 
+    <!--
+        Including a favicon.
+        The <link> tag can also be used to set a favicon.
+        - rel="icon": Specifies the type of icon.
+        - href: Path to the icon file.
+    -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <!--
         The <meta> tag provides metadata about the HTML document.
         - charset="UTF-8": Ensures proper rendering of characters, supporting all languages.
         - viewport: Makes the page responsive, adapting to different device widths.
     -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- never delete this. -->
 
     <!--
         Linking a CSS stylesheet.
@@ -26,17 +34,9 @@
         Adding JavaScript to the document.
         - Use the <script> tag for inline or external scripts.
         - src: Path to the JavaScript file.
-        - defer: Ensures the script executes after the document has been parsed.
+        - defer: Ensures the script executes after the document has been parsed. Alternatively, place it at the end of the document.
     -->
     <script src="scripts.js" defer></script>
-
-    <!--
-        Including a favicon. (for icons on html)
-        The <link> tag can also be used to set a favicon.
-        - rel="icon": Specifies the type of icon.
-        - href: Path to the icon file.s
-    -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!--
         Adding custom fonts.
@@ -53,6 +53,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
+
 <body>
     <!-- Headings -->
     <!--
@@ -60,7 +61,7 @@
         - <h1> is the most important heading.
         - Headings should follow a hierarchy for accessibility and SEO.
     -->
-    <h1>Main Heading (h1)</h1>
+    <h1 translate="no">Main Heading (h1)</h1> <!-- translate="no" for not translating -->
     <h2>Secondary Heading (h2)</h2>
     <h3>Tertiary Heading (h3)</h3>
     
@@ -76,7 +77,7 @@
         The <a> tag defines a hyperlink.
         - href: Specifies the URL the link points to.
         - target: Defines where to open the link. (_blank opens in a new tab.)
-        - src: Specifies for a file on your files.
+        - src: Specifies a file in your files. To go backwards use ../ .
         Always provide meaningful link text for accessibility.
     -->
     <a href="https://example.com" target="_blank">Visit Example</a>
@@ -85,7 +86,7 @@
     <!--
         The <img> tag embeds an image in the page.
         - src: Path to the image file.
-        - alt: Descriptive text for accessibility and in case the image cannot load.
+        - alt: Descriptive text for accessibility and in case the image cannot load. Describes the image is the best alt text.
     -->
     <img src="image.jpg" alt="Example Image">
 
@@ -114,14 +115,19 @@
         <h2>Section Heading</h2>
         <p>This is a paragraph inside a section.</p>
     </section>
-
-    <!-- 
-        ADD IF U READ:
-        span 
-        br
-        strong
-        em
+    <!-- Text Formatting and Line Breaks -->
+    <!--
+        - <span>: Inline container for styling specific text
+        - <br>: Line break element
+        - <strong>: Important text (renders bold)
+        - <em>: Emphasized text (renders italic)
     -->
+    <p>
+        This is a <span style="color: blue;">colored span</span> of text.<br>
+        This text is on a new line after a break.<br>
+        This is <strong>important text</strong> using strong.<br>
+        This is <em>emphasized text</em> using em.
+    </p>
 
     <!-- Form and Input Types -->
     <!--
@@ -165,6 +171,93 @@
         - Keep the main content of your page semantic and logical.
         - Use comments to document complex sections of your code.
     -->
+
+    <!--
+        A flexbox example:
+        - Flexbox is a layout model that allows you to design complex layouts with ease.
+        - Use display: flex; on a container to enable flexbox.
+        - It only manages children, in the way that they are displayed.
+    -->
+    <h1>Upgrade to Pro</h1>
+        
+    <div class="pricing">
+        
+        <div> <!-- this is a child of flexbox -->
+            <h2>For individuals</h2>
+            <ul>
+                <li>1 GB</li>
+                <li>No support</li>
+            </ul>
+            <button>Buy now</button>
+        </div>
+        
+        <div> <!-- this is a child of flexbox -->
+            <h2>For enterprise</h2>
+                <ul>
+                    <li>10 GB</li>
+                <li>Priority support</li>
+                </ul>
+            <button>Contact us</button>
+        </div>
+    </div>
+
+    <article>
+        <h2>Article Title</h2>
+        <p>This is an article about a topic.</p>
+    </article>
+    
+    <!-- 
+        IDs in HTML:
+        - Unique identifier for a single HTML element
+        - Must be unique within the document (only one element can have a specific ID)
+        - Used when you need to identify ONE specific element
+        - Written as id="myId"
+        - In CSS selected with # symbol (#myId)
+
+        ID vs Class:
+        - ID: Unique, one per element, one element per ID
+        - Class: Can be reused, multiple classes per element, multiple elements per class
+        
+        When to use ID:
+        - For elements that won't be repeated (header, footer, main navigation) UNIQUE ELEMENTS
+        - JavaScript manipulation of specific elements.
+        - Form labels that need to match specific inputs
+        - Referenced in CSS with a # symbol.
+
+        When to use Class:
+        - For repeating styles (buttons, cards, list items)
+        - Multiple elements sharing the same styling
+        - Elements that need multiple style rules.
+        - Referenced in CSS with a . symbol.
+    -->
+    <div id="example">
+        This is a div with an ID of "example".
+    </div>
+
+    <audio src=""></audio> <!-- audio tag -->
+    <video src=""></video> <!-- video tag -->
+    
+    <!-- Two ways to have js on ur web-->
+    
+    <script>
+        //some js code (Usually ver basic or dumb js code)
+    </script> 
+
+    <script src="scripts.js" defer></script> <!-- this is the best way to include js in ur web. Iclude the tag type="module" if u work with multiple js files and imports.  -->
+    
+    <!-- types of imports of js-->
+
+    <!-- Regular - Blocks parsing -->
+    <script src="script.js"></script>
+
+    <!-- Defer - Best for most cases -->
+    <script src="script.js" defer></script>
+
+    <!-- Async - Downloads and executes ASAP -->
+    <script src="script.js" async></script>
+
+    <!-- There are a few tags for buttons, text, elements, etc. That makes interacctions with the js DOM -->
+    <button id="increment-btn" onclick="increment()">INCREMENT</button> <!-- this is the most basic way to interact with js. It trigers a function that it's on the js file  -->
 </body>
 </html>
 
