@@ -1,5 +1,9 @@
 
 /*
+Useful pages:
+https://heropatterns.com/
+
+
 The box model explains how HTML elements are structured and spaced. It consists of:
 
 1. Margin (Outer spacing of the box)
@@ -58,6 +62,8 @@ A powerful tool for alignment and spacing:
        - space-around; /* Equal space around elements */
 
 Responsive Design:
+
+flex-shrink: 0; /* Prevents items from shrinking */
 ------------------
 Ensures the layout adapts to different screen sizes:
 
@@ -134,3 +140,27 @@ Font styling:
   Example:
     font-family: 'Arial', sans-serif;
 */
+
+.nav-list {
+   list-style: none; /* Removes default list styling */ 
+}
+
+li::marker {
+   color: black; /*Changes the color of the losts*/
+}
+
+nav > img { /*** Selects the img element inside a nav element ***/
+   width: 30px;
+}
+
+/*
+Gap
+It's for grid layout, it's the space between grid items.
+*/
+
+main {
+   padding: 60px 30px;
+   background-image: url(/images/react-logo-half.png); /* Background image */
+   background-repeat: no-repeat ; /* No repeating of the image, making one img */
+   background-position: right; /* Position the image to the right */
+}
