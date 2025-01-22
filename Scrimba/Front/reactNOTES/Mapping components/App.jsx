@@ -8,7 +8,7 @@ So we don't render the each <Joke /> component individually, we can use the map 
 */
 export default function App() {
     
-    const jokeElements = jokesData.map((joke) => {
+    const jokeElements = jokesData.map((joke) => { // recorre el arreglo pasando datos.
         return <Joke  
         setup={joke.setup} 
         punchline={joke.punchline}/>
